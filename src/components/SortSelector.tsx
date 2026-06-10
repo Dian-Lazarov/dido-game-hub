@@ -9,9 +9,9 @@ interface Props {
 const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
   const sortOrders = [
     { value: "", label: "Relevance" },
-    { value: "-added", label: "Date Added" }, // -added => reverse sort order (show newest games first)
+    { value: "added", label: "Date Added" }, // -added => reverse sort order
     { value: "name", label: "Name" },
-    { value: "-released", label: "Release Date" },
+    { value: "released", label: "Release Date" },
     { value: "-metacritic", label: "Popularity" },
     { value: "-rating", label: "Average Rating" },
   ];
