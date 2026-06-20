@@ -18,6 +18,15 @@ const GameGrid = ({ gameQuery }: Props) => {
 
   if (error) return <Text>{error}</Text>;
 
+  // Handle unfound/empty search results
+  if (!isLoading && data.length === 0) {
+    return (
+      <Text padding="10px" fontSize="lg" fontWeight="semibold">
+        No results found for {gameQuery.searchText || "your search"}
+      </Text>
+    );
+  }
+
   return (
     <SimpleGrid
       columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
